@@ -3,6 +3,7 @@ import Search from './components/Search';
 import ViewBuilding from './components/ViewBuilding';
 import BuildingList from './components/BuildingList';
 import Credit from './components/Credit';
+import RemoveBuilding from './components/RemoveBuilding';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +28,23 @@ class App extends React.Component {
       selectedBuilding: id 
     });
   
+  }
+
+  deleteBuilding() {
+    var data = this.state.data.filter (
+      idBuilding => {
+        return idBuilding.id !== this.state.selectedBuilding.id
+      })
+      this.setState ({ data : data })
+  }
+
+  addBuilding(idBuilding) { 
+    var name = idBuilding.name;
+    var code = idBuilding.code;
+    var address = idBuilding.address;
+    var latitude = idBuilding.coordinates.latitude;
+    var longitude = idBuilding.coordinates.longitude;
+
   }
 
   render() {
@@ -62,10 +80,18 @@ class App extends React.Component {
             <div className="column2">
               <ViewBuilding
                 data = {this.props.data}
-                selectedUpdate = {this.selectedUpdate.bind(this)}
+                selectedUpdate = {this.state.selectedBuilding}
+                deleteBuilding = {this.deleteBuilding.bind(this)}
               />
             </div>
           </div>
+          {/* <div>
+            <RemoveBuilding
+              data = {this.props.data}
+              selectedUpdate = {this.state.selectedBuilding}
+              // deleteBuilding = {this.deleteBuilding.bind(this)}
+            />
+          </div> */}
           <Credit />
         </main>
       </div>
