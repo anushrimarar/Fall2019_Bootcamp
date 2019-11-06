@@ -1,3 +1,17 @@
 body {
-    background-color: lightskyblue;
+    background-color: #87cefa;
+}
+
+.title {
+    color: darkblue;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font: bold;
+    font-style: italic;
+}
+
+#source {
+    color: black;
 }

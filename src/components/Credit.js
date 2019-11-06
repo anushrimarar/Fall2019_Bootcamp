@@ -4,7 +4,7 @@ class Credit extends React.Component {
 	render() {
 		return (
 			<div className="credit">
-				<p>
+				<p id="source">
 					Source of building list:{' '}
 					<a href="http://www.ufl.edu">University of Florida </a>
 				</p>

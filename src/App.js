@@ -52,7 +52,8 @@ class App extends React.Component {
     return (
       <div className="bg">
         <div className="row">
-          <h1>UF Directory App</h1>
+          <h1 className = "title"><img src = "https://cdn.iconscout.com/icon/premium/png-256-thumb/phone-directory-13-733472.png" height="70px"></img>
+UF Directory App</h1>
         </div>
 
         <Search
